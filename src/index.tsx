@@ -4,6 +4,7 @@ import Hello from './constants/Hello'
 import { Provider } from 'react-redux'
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
+import './demo'
 import { createStore } from 'redux'
 import { enthusiasm } from './reducers'
 
