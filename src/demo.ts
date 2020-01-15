@@ -49,3 +49,181 @@
 
 // let someValue: any = 'this is a string'
 // let strLength: number = (someValue as string).length
+
+// function printLabel(labelledObj: { size: any, label: string }) {
+//   console.log(labelledObj.label)
+// }
+
+// let myObj = { size: 10, label: 'size 10 object' }
+// printLabel(myObj)
+
+// interface LabelledValue {
+//   label: string
+// }
+
+// function printLabel(labelledObj: LabelledValue) {
+//   console.log(labelledObj.label)
+// }
+
+// let myObj = { size: 10, label: 'team' }
+// printLabel(myObj)
+
+// interface SquareConfig {
+//   color?: string
+//   width?: number
+// }
+
+// function createSquare(config: SquareConfig): { color: string, area: number } {
+//   let newSquare = { color: 'white', area: 100 }
+//   if (config.color) {
+//     newSquare.color = config.color
+//   }
+//   if (config.width) {
+//     newSquare.area = config.width * config.width
+//   }
+//   return newSquare
+// }
+
+// interface Point {
+//   readonly x: number
+//   readonly y: number
+// }
+
+// let p1: Point = {
+//   x: 10,
+//   y: 20
+// }
+
+// ro[0] = 12
+// ro.push(5)
+
+// let a: number[] = [1, 2, 3, 4]
+// let ro: ReadonlyArray<number> = a
+
+// a = ro as number[]
+
+// interface SquareConfig {
+//   color?: string
+//   width?: number
+// }
+
+// function createSquare(config: SquareConfig): { color: string; area: number } {
+//   return { color: '20', area: 30 }
+// }
+
+// // let mySquare = createSquare({ colour: "red", width: 100 })
+
+// let SquareOptions = { colour: 'red', width: 100 }
+// let mySquare = createSquare(SquareOptions)
+
+// interface SearchFunc {
+//   (source: string, subString: string): boolean
+// }
+
+// let mySearch: SearchFunc
+// mySearch = function (source: string, subString: string) {
+//   let result = source.search(subString)
+//   return result > -1
+// }
+
+// mySearch = function (src: string, sub: string): boolean {
+//   let result = src.search(sub)
+//   return result > -1
+// }
+
+// interface StringArray {
+//   [index: number]: string
+// }
+
+// let myArray: StringArray
+// myArray = ['Bob', 'Fred']
+
+// let myStr: string = myArray['ss']
+
+// class Animal {
+//   name: string
+// }
+
+// class Dog extends Animal {
+//   breed: string
+// }
+
+// interface NotOkay {
+//   [x: number]: Animal
+//   [x: string]: Dog
+// }
+
+// interface ReadonlyStringArray {
+//   readonly [index: number]: string
+// }
+
+// let myArray: ReadonlyStringArray = ['alice', 'bob']
+
+// interface ClockInterface {
+//   currentTime: Date
+//   setTime(d: Date)
+// }
+
+// class clock implements ClockInterface {
+//   currentTime: Date
+//   hour: 20
+//   setTime(d: Date) {
+//     this.currentTime = d
+//   }
+// }
+
+// interface ClockInterface {
+//   tick(): any
+// }
+
+// interface ClockConstructor {
+//   new(hour: number, minute: number): ClockInterface
+// }
+
+// function createClock(stor: ClockConstructor, hour: number, minute: number): ClockInterface {
+//   return new stor(hour, minute)
+// }
+
+// class DigitalClock implements ClockInterface {
+//   constructor(h: number, m: number) { }
+//   tick() {
+
+//   }
+// }
+
+// let digital = createClock(DigitalClock, 12, 17)
+
+// interface Shape {
+//   color: string
+// }
+
+// interface Square extends Shape {
+//   sideLength: number
+// }
+
+// let square = <Square>{
+//   color: 'blue',
+//   sideLength: 10
+// }
+
+// console.log(square)
+
+// interface Counter {
+//   (start: number): string
+//   interval: number
+//   reset(): void
+// }
+
+// function getCounter(): Counter {
+//   let counter = <Counter>function (start: number) {
+//     counter.interval = 123;
+//     counter.reset = function () { }
+//   }
+//   return counter
+
+// }
+
+// let c = getCounter()
+// c(10)
+// c.reset()
+// c.interval = 50
