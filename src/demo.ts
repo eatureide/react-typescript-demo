@@ -226,4 +226,11 @@
 // let c = getCounter()
 // c(10)
 // c.reset()
-// c.interval = 50
+// c.interval = 5
+
+
+function identity<T>(arg: T): T {
+  return arg
+}
+
+let myIdentity: <T>(arg: T) => T = identity
