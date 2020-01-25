@@ -2,7 +2,6 @@ import { EnthusiasmAction } from '../actions'
 import { StoreState } from '../types'
 import { INCREMENT_ENTHUSIASM, DECREMENT_ENTHUSIASM } from '../constants'
 
-
 export function enthusiasm(state: StoreState, action: EnthusiasmAction): StoreState {
   switch (action.type) {
     case INCREMENT_ENTHUSIASM:
